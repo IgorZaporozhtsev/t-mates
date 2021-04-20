@@ -10,6 +10,12 @@ pipeline {
             }
         }
 
+        stage ('build project') {
+            steps{
+                sh './gradlew build'
+            }
+        }
+
         stage ('assemble docker image with jib') {
             steps{
                 echo 'assemble docker image with jib'
