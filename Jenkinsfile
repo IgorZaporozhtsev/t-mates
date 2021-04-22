@@ -7,8 +7,9 @@ pipeline {
         stage ('run unit tests') {
             steps{
                 echo 'run unit tests'
-                sh 'chmod +x gradlew'
-                sh './gradlew clean test'
+                withGradle(){
+                    sh './gradlew -v'
+                }
             }
         }
 
