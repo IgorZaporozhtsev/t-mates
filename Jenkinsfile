@@ -15,7 +15,7 @@ pipeline {
 
         stage ('build project') {
             steps{
-                sh './gradlew build'
+                echo 'run build project'
             }
         }
 
