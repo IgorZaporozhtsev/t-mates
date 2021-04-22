@@ -8,7 +8,7 @@ pipeline {
             steps{
                 echo 'run unit tests'
                 withGradle(){
-                    sh './gradlew -v'
+                    sh './gradlew test'
                 }
             }
         }
