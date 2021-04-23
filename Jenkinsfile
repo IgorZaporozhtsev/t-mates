@@ -17,7 +17,7 @@ pipeline {
             steps{
                 echo 'run build project'
                 withGradle(){
-                    sh './gradlew build'
+                    sh './gradlew build  --stacktrace'
                 }
             }
         }
