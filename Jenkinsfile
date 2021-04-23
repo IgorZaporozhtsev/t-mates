@@ -3,20 +3,20 @@ pipeline {
     agent any
 
     stages {
-
+         stage ('build project') {
+                    steps{
+                        echo 'run build project'
+                            sh './gradlew clean build  --stacktrace'
+                    }
+                }
         stage ('run unit tests') {
             steps{
                 echo 'run unit tests'
-                    sh './gradlew clean test --info'
+                    sh './gradlew test --stacktrace'
             }
         }
 
-        stage ('build project') {
-            steps{
-                echo 'run build project'
-                    sh './gradlew build  --debug'
-            }
-        }
+
 
         stage ('assemble docker image with jib') {
             steps{
