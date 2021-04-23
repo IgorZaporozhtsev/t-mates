@@ -14,7 +14,7 @@ class MyFirstPr{
         val a = 3
         val b = 3
 
-        assertThat(service.sum(a, b)).isEqualTo(3)
+        assertThat(service.sum(a, b)).isEqualTo(6)
 
     }
 }
