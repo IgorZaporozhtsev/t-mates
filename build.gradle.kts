@@ -13,8 +13,8 @@ tasks.withType<Test> {
 	useJUnitPlatform()
 }
 tasks.withType<JavaCompile> {
-	sourceCompatibility = "11"
-	targetCompatibility = "11"
+	java.sourceCompatibility = JavaVersion.VERSION_11
+	java.targetCompatibility = JavaVersion.VERSION_11
 }
 
 tasks.withType<KotlinCompile> {
