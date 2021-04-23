@@ -16,6 +16,9 @@ pipeline {
         stage ('build project') {
             steps{
                 echo 'run build project'
+                withGradle(){
+                    sh './gradlew build'
+                }
             }
         }
 
