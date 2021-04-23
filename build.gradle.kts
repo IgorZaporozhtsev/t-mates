@@ -13,14 +13,14 @@ tasks.withType<Test> {
 	useJUnitPlatform()
 }
 tasks.withType<JavaCompile> {
-	sourceCompatibility = "1.8"
-	targetCompatibility = "1.8"
+	sourceCompatibility = "1.11"
+	targetCompatibility = "1.11"
 }
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "1.8"
+		jvmTarget = "1.11"
 	}
 }
 jib {
