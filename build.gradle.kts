@@ -9,6 +9,9 @@ plugins {
 	kotlin("plugin.jpa") version "1.4.32"
 }
 
+tasks.withType<Test> {
+	useJUnitPlatform()
+}
 
 jib {
 	to{
