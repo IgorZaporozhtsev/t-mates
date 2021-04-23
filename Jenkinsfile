@@ -7,18 +7,14 @@ pipeline {
         stage ('run unit tests') {
             steps{
                 echo 'run unit tests'
-                withGradle(){
-                    sh './gradlew test'
-                }
+                    sh './gradlew test --debug'
             }
         }
 
         stage ('build project') {
             steps{
                 echo 'run build project'
-                withGradle(){
-                    sh './gradlew build  --stacktrace'
-                }
+                    sh './gradlew build  --debug'
             }
         }
 
