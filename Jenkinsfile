@@ -21,6 +21,11 @@ pipeline {
         stage ('assemble docker image with jib') {
             steps{
                 echo 'assemble docker image with jib'
+
+                sh './gradlew jibDockerBuild'
+                sh 'docker images -a'
+                sh 'docker tag v1 booratina/t-mates:0.0.1'
+                sh 'docker push booratina/t-mates:0.0.1'
             }
         }
 
