@@ -1,2 +1,17 @@
 server:
   port: 8331
+
+spring:
+  application:
+    name: t-mates
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: "my_group_id"
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
